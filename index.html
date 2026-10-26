@@ -1,0 +1,158 @@
+Haider, [10/26/2026 8:01 AM]
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز الجود - PS4 Host Cache</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header-title {
+            margin-top: 10px;
+            font-size: 28px;
+            color: #38bdf8;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+        }
+
+        .card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 2px solid #3b82f6;
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 650px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            margin: auto 0;
+        }
+
+        .store-name {
+            font-size: 42px;
+            font-weight: 900;
+            color: #f59e0b;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        /* شريط التحميل المستوحى من الصورة */
+        .progress-box {
+            margin: 25px 0;
+        }
+
+        .progress-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 24px;
+            background-color: #0f172a;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #475569;
+        }
+
+        .progress-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+            border-radius: 12px;
+            transition: width 0.3s ease;
+        }
+
+        .footer-info {
+            background: rgba(15, 23, 42, 0.9);
+            border-top: 2px solid #334155;
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            font-size: 18px;
+            color: #e2e8f0;
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
+        .phone-num {
+            color: #4ade80;
+            direction: ltr;
+            display: inline-block;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-title">www.AL-JOOD.github.io - PS4 Host Cache</div>
+
+    <div class="card">
+        <div class="store-name">مركز الجود</div>
+        <div class="subtitle">صيانة وإلكترونيات • ألعاب وتعديل كافة الأجهزة</div>
+
+        <div class="progress-box">
+            <div class="progress-text" id="statusText">Installing Offline Cache ... 0%</div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progressBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-info">
+        <div class="info-item">بغداد - الدورة - أبو دشير</div>
+        <div class="info-item">هاتف: <span class="phone-num">07832600520</span></div>
+        <div class="info-item" style="color: #94a3b8; font-size: 14px; margin-top: 5px;">جميع الحقوق محفوظة © مركز الجود</div>
+    </div>
+
+    <script>
+        // محاكاة تحفيز حفظ الكاش في المتصفح تلقائياً
+        let percent = 0;
+        const statusText = document.getElementById('statusText');
+        const progressBar = document.getElementById('progressBar');
+
+Haider, [10/26/2026 8:01 AM]
+const interval = setInterval(() => {
+            percent += 2;
+            if (percent > 100) {
+                percent = 100;
+                clearInterval(interval);
+                statusText.innerHTML = "تم حفظ الـ Cache بنجاح! يمكنك الآن استخدام الصفحة أوفلاين.";
+                statusText.style.color = "#4ade80";
+            } else {
+                statusText.innerHTML = Installing Offline Cache ... ${percent}%;
+                progressBar.style.width = ${percent}%;
+            }
+        }, 60);
+    </script>
+
+</body>
+</html>
