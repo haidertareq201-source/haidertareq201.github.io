@@ -302,7 +302,7 @@ Haider, [10/26/2026 8:26 AM]
 </body>
 </html>
 
-Haider, [10/26/2026 8:38 AM]
+Haider, [10/26/2026 8:46 AM]
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -372,76 +372,4 @@ Haider, [10/26/2026 8:38 AM]
       height: 16px;
       background-color: #1e293b;
       border: 1px solid #3b82f6;
-      border-radius: 10px;
-      overflow: hidden;
-      padding: 2px;
-    }
-
-    .progress-bar {
-      width: 0%;
-      height: 100%;
-      background: linear-gradient(90deg, #3b82f6, #60a5fa);
-      border-radius: 8px;
-      transition: width 0.3s ease;
-    }
-
-    footer {
-      margin-bottom: 10px;
-      font-size: 0.9rem;
-      color: #94a3b8;
-      line-height: 1.6;
-    }
-
-    footer .location {
-      font-weight: bold;
-      color: #e2e8f0;
-    }
-
-    footer .phone {
-      color: #4ade80;
-      font-weight: bold;
-      direction: ltr;
-      display: inline-block;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h2>www.AL-JOOD.github.io - PS4 Host Cache</h2>
-  </header>
-
-  <main class="main-card">
-    <h1>مركز الجود</h1>
-    <div class="status-text" id="status">Installing Offline Cache ... 0%</div>
-    <div class="progress-bar-container">
-      <div class="progress-bar" id="progress"></div>
-    </div>
-  </main>
-
-  <footer>
-    <div class="location">بغداد - الدورة - أبو دشير</div>
-    <div>هاتف: <span class="phone">07832600520</span></div>
-    <div>جميع الحقوق محفوظة © مركز الجود</div>
-  </footer>
-
-  <script>
-    let progress = 0;
-    const progressBar = document.getElementById('progress');
-    const statusText = document.getElementById('status');
-
-    const interval = setInterval(() => {
-      if (progress < 100) {
-        progress += 5;
-        progressBar.style.width = progress + '%';
-        statusText.innerText = Installing Offline Cache ... ${progress}%;
-      } else {
-        clearInterval(interval);
-        statusText.innerText = 'Cached Successfully!';
-        statusText.style.color = '#4ade80';
-      }
-    }, 200);
-  </script>
-
-</body>
-</html>
+      border-radius:
